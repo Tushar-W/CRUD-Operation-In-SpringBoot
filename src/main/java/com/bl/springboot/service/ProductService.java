@@ -18,4 +18,10 @@ public class ProductService {
     public void save(Product product){
         repo.save(product);
     }
+
+    public Product get(Integer id){
+        return repo.findById(id).get();
+    }
+
+
 }
