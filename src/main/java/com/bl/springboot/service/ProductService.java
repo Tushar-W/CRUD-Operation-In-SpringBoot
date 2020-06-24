@@ -3,7 +3,6 @@ package com.bl.springboot.service;
 import com.bl.springboot.model.Product;
 import com.bl.springboot.repository.IProductRepository;
 import org.springframework.beans.factory.annotation.Autowired;
-
 import java.util.List;
 
 public class ProductService {
@@ -23,5 +22,7 @@ public class ProductService {
         return repo.findById(id).get();
     }
 
-
+    public void delete(Integer id){
+        repo.deleteById(id);
+    }
 }
